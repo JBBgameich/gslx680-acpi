@@ -663,10 +663,10 @@ release:
 	return 0;
 }
 
-int gsl_ts_remove(struct i2c_client *client) {
+void gsl_ts_remove(struct i2c_client *client) {
 	/* Power the device off */
 	gsl_ts_power(client, true);
-	return 0;
+	return;
 }
 
 static int __maybe_unused gsl_ts_suspend(struct device *dev)
